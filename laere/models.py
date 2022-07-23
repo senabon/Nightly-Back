@@ -34,6 +34,7 @@ class Event(models.Model):
     title = models.CharField(max_length=200)
     dateTime = models.CharField(max_length=200,null=True)
     host= models.CharField(max_length=100)
+    city_state= models.CharField(max_length=100, null=True)
     location = models.CharField(max_length=200,null=True)
     state = models.ForeignKey(State, on_delete=models.SET_NULL, null=True)
     city = models.ForeignKey(City, on_delete=models.SET_NULL, null=True)

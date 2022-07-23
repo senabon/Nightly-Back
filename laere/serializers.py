@@ -7,7 +7,7 @@ from .models import User, Event #, Ratings
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event 
-        fields = ('id', 'state', 'city', 'url', 'location', 'host', 'description', 'dateTime', 'photo_url')
+        fields = ('id', 'state', 'city', 'url', 'location', 'host', 'description', 'dateTime', 'photo_url', 'city_state')
 
 
 #class RatingsSerializer(serializers.ModelSerializer):

@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-extensions = "*"
+psycopg2-binary = "*"
+ipython = "*"
+django-cors-headers = "*"
+django-rest-framework = "*"
+djangorestframework-simplejwt = "*"
+django-allauth = "*"
+django-crispy-forms = "*"
+crispy-bootstrap5 = "*"
+pillow = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

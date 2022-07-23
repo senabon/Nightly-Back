@@ -1,0 +1,3 @@
+CREATE DATABASE laere;
+CREATE USER laereruser WITH PASSWORD 'noenytt';
+GRANT ALL PRIVILEGES ON DATABASE laere TO laereruser;

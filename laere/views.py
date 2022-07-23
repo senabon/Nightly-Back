@@ -27,6 +27,19 @@ def event_list(request):
     ev_list = list(events)
     return JsonResponse(ev_list, safe=False )
 
+@api_view(['POST'])
+def eventCreate(request):
+        serializer = EventSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+        return Response(serializer.data)
+
+@api_view(['DELETE'])
+def eventDelete(request, pk):
+    events = Event.objects.get(id=pk)
+    events.delete()
+
 class EventList(generics.ListCreateAPIView):
     serializer_class = EventSerializer
     queryset = Event.objects.all()

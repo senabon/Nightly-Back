@@ -16,6 +16,9 @@ urlpatterns = [
     path('events/', views.EventList.as_view()),
     path('events/<int:pk>', views.EventDetail.as_view()),
     path('Events_protected/', views.EventListProtected.as_view()),
+    path('addevents', views.eventCreate, name='create-event'),
+
+    path('delete/<int:pk>', views.eventDelete, name='delete')
 
    # path('register', views.register_request, name="register"),
    # path('login', views.login_request, name="login")
